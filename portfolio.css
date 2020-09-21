@@ -1,0 +1,293 @@
+html{
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+body{
+  margin: 0;
+  background-color: #f3e0a7;
+}
+.cut-line img{
+  width: 800px;
+  margin: 5px auto;
+}
+.cut-line{
+  text-align: center;
+}
+h1{
+  font-size: 30px;
+  border-bottom: solid #BF6836 3px;
+  text-align: center;
+}
+
+/* 写真、名前S */
+.main{
+  height: 2px60;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name img{
+  border-radius: 50%;
+  width: 170px;
+  border: solid white;
+}
+.name-p{
+  font-size: 35px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+/* 写真、名前F */
+/* 自己紹介S */
+.about h1{
+  margin-top: 0px;
+  text-align: center;
+}
+.about-first p{
+  width: 550px;
+  text-align: center;
+  margin: 0 auto;
+}
+.flex img{
+  width: 50px;
+  height: 50px;
+}
+.center{
+  width: 100%;
+}
+.information{
+  width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+}
+.flex{
+  display: flex;
+  flex-direction: row;
+}
+.info-mine{
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  border-left: solid 2px;
+  border-right: solid 2px;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
+.info-mine h2{
+  font-size: 25px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  line-height: 50px;
+}
+.info-mine p{
+  margin: 0px;
+  font-size: 20px;
+}
+/* 自己紹介F */
+/* WorksS */
+.works-set img{
+  width: 300px;
+  border: solid 2px #F2DC6B;
+}
+.works-set{
+  display: flex;
+  flex-direction: row;
+}
+.works-set h2{
+  font-size: 28px;
+  margin: 5px 0 auto auto;
+}
+.works{
+  margin-bottom: 50px;
+}
+.mozi{
+  margin-left: 20px;
+}
+.introduction{
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.use-tech {
+  margin: 0px auto 10px auto;
+}
+.first{
+  margin-left: 15%;
+}
+.second{
+  margin-left: 40%;
+}
+/* WorksF */
+/* ボタンS */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* font-size: 62.5%; */
+}
+
+body {
+  padding: 30px;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-svg {
+  font-weight: 700;
+  line-height: 31px;
+
+  width: 74px;
+  height: 31px;
+  padding: 0;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  background-color: transparent;
+}
+
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 200px, 16px;
+  stroke-dashoffset: 70px;
+}
+
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 284px;
+}
+.mozi-button{
+  font-size: 62.5%;
+  color: #000;
+  margin: 0;
+}
+/* ボタンF */
+/* フォローリンクS */
+.links{
+  height: 100px;
+  width: 150px;
+  margin: 0 auto;
+}
+.bottan{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.follow-me{
+  margin: 0px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  font-size: 17px;
+  text-align: center;
+}
+.links img{
+  width: 37px;
+  border-radius: 50%;
+}
+.twitter{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-top: 0px;
+}
+.twitter p{
+  font-size: 13px;
+  margin: 0px;
+}
+.github{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-top: 0px;
+}
+.github p{
+  font-size: 13px;
+  margin: 0px;
+}
+.text-ali{
+  text-align: center;
+  margin: 0px;
+}
+/* フォローリンクF */
+/* 連絡先S */
+.contact-set img{
+  width: 33px;
+  height: 33px;
+}
+.contact-set{
+  height: 33px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.contact-main{
+  width: 300px;
+  margin: auto;
+}
+.contact-set p{
+  font-size: 20px;
+  margin: 0 auto 0 10px;
+  line-height: 33px;
+}
+/* 連絡先F */
+.footer{
+  display: flex;
+  justify-content: center;
+}
+.footer p{
+  font-size: 14px;
+}
+a p{
+  color: rgb(207, 201, 201);
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
