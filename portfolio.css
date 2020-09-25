@@ -249,6 +249,16 @@ a.btn-svg:hover svg rect {
   font-size: 13px;
   margin: 0px;
 }
+.qiita{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-top: 0px;
+}
+.qiita p{
+  font-size: 13px;
+  margin: 0px;
+}
 .text-ali{
   text-align: center;
   margin: 0px;
