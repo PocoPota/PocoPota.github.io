@@ -5,6 +5,19 @@ body{
   margin: 0;
   background-color: #f3e0a7;
 }
+/* 文字等選択時S */
+::selection
+{
+    background: darkorange;
+    color: black;
+}
+/* for Firefox */
+::-moz-selection
+{
+    background: darkorange;
+    color: black;
+}
+/* 文字選択時F */
 .cut-line img{
   width: 800px;
   margin: 5px auto;
