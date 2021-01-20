@@ -264,7 +264,7 @@ footer p{
   margin-bottom: 20px;
 }
 /* レスポンシブ */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 750px){
   /* 表示・非表示関連 */
   .for-pc{
    display: none!important;
