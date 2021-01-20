@@ -303,6 +303,9 @@ footer p{
     border: solid 5px white;
     margin: 0;
   }
+  #works-lead{
+    padding: 10px;
+  }
   .works-box-inner{
     width: 90%;
     margin: 0;
