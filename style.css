@@ -268,6 +268,7 @@ footer p{
   /* 表示・非表示関連 */
   .for-pc{
    display: none!important;
+   color: transparent!important;
   }
   .for-smh{
     display: block;
@@ -301,6 +302,14 @@ footer p{
     border-radius: 50%;
     border: solid 5px white;
     margin: 0;
+  }
+  .works-box-inner{
+    width: 90%;
+    margin: 0;
+  }
+  .works-box-inner img{
+    width: 100%;
+    height: auto;
   }
   /* スマホ用ヘッダー */
   /*ヘッダーまわりはサイトに合わせて調整してください*/
