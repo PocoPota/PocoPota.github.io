@@ -1,38 +1,276 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <!-- 言語・環境設定 -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-<!-- ページの内容 -->
-<title>ページが見つかりませんでした。 | 404  Not Found</title>
-<meta name="description" content="指定されたページは存在しないか、または移動した可能性があります。">
+  <!-- ページの内容 -->
+  <title>ページが見つかりませんでした。 | 404 Not Found</title>
+  <meta name="description" content="指定されたページは存在しないか、または移動した可能性があります。">
 
-<!-- サイトアイコン -->
-<!-- <link rel="icon" href="画像URL" sizes="16x16" type="image/拡張子（ping、gifなど）"> -->
+  <!-- サイトアイコン -->
+  <!-- <link rel="icon" href="画像URL" sizes="16x16" type="image/拡張子（ping、gifなど）"> -->
 
-<!-- OGPタグ用 -->  
-<html prefix="og: http://ogp.me/ns#"></html>
-<meta property="og:url" content="https://pocopota.github.io/" />
-<meta property="og:title" content="ページが見つかりませんでした。 | 404  Not Found" />
-<meta property="og:type" content="website">
-<meta property="og:description" content="指定されたページは存在しないか、または移動した可能性があります。">
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@pocoPota_io" />
-<meta property="og:locale" content="ja_JP" />
+  <!-- OGPタグ用 -->
+  <html prefix="og: http://ogp.me/ns#">
 
-<style>
-  #not-found{
-    text-align: center;
-  }
-</style>
+  </html>
+  <meta property="og:url" content="https://pocopota.github.io/" />
+  <meta property="og:title" content="ページが見つかりませんでした。 | 404  Not Found" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="指定されたページは存在しないか、または移動した可能性があります。">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@pocoPota_io" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <style>
+    #not-found {
+      text-align: center;
+    }
+
+    #site-link {
+      text-align: center;
+    }
+
+    /* ピアノ用↓ */
+    #piano {
+      position: relative;
+      height: 234px;
+      width: 1026px;
+      margin: 80px auto;
+    }
+
+    #white-key-div {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .white-key {
+      background-color: white;
+      border-radius: 5px;
+      border: solid rgb(99, 99, 99) 2px;
+      width: 50px;
+      height: 230px;
+    }
+
+    #black-key-div {
+      display: flex;
+      flex-direction: row;
+      margin-left: 37px;
+      position: absolute;
+      top: 0;
+    }
+
+    .black-key {
+      background-color: black;
+      border-radius: 5px;
+      border: solid 2px black;
+      width: 30px;
+      height: 150px;
+      margin-right: 20px;
+    }
+
+    .black-key-none {
+      background-color: #00000000;
+      border: solid 2px #00000000;
+      width: 30px;
+      height: 150px;
+      margin-right: 20px;
+    }
+    @media screen and (max-width: 1026px){
+      #piano{
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div id="not-found">
-    <h1>404  Not Found</h1>
+    <h1>404 Not Found</h1>
     <h3>指定されたページは存在しないか、または移動した可能性があります。<br>The specified page may not exist or may have been moved.</h3>
   </div>
+  <h3 id="site-link">サイト一覧は<a href="https://pocopota.github.io/#works-link">こちらから</a></h3>
+  <section id="piano">
+
+    <div id="white-key-div">
+      <div class="white-key" onclick="w1()"></div>
+      <div class="white-key" onclick="w2()"></div>
+      <div class="white-key" onclick="w3()"></div>
+      <div class="white-key" onclick="w4()"></div>
+      <div class="white-key" onclick="w5()"></div>
+      <div class="white-key" onclick="w6()"></div>
+      <div class="white-key" onclick="w7()"></div>
+      <div class="white-key" onclick="w8()"></div>
+      <div class="white-key" onclick="w9()"></div>
+      <div class="white-key" onclick="w10()"></div>
+      <div class="white-key" onclick="w11()"></div>
+      <div class="white-key" onclick="w12()"></div>
+      <div class="white-key" onclick="w13()"></div>
+      <div class="white-key" onclick="w14()"></div>
+      <div class="white-key" onclick="w15()"></div>
+      <div class="white-key" onclick="w16()"></div>
+      <div class="white-key" onclick="w17()"></div>
+      <div class="white-key" onclick="w18()"></div>
+      <div class="white-key" onclick="w19()"></div>
+    </div>
+    <div id="black-key-div">
+      <div class="black-key" onclick="b1()"></div>
+      <div class="black-key" onclick="b2()"></div>
+      <div class="black-key-none"></div>
+      <div class="black-key" onclick="b3()"></div>
+      <div class="black-key" onclick="b4()"></div>
+      <div class="black-key" onclick="b5()"></div>
+      <div class="black-key-none"></div>
+      <div class="black-key" onclick="b6()"></div>
+      <div class="black-key" onclick="b7()"></div>
+      <div class="black-key-none"></div>
+      <div class="black-key" onclick="b8()"></div>
+      <div class="black-key" onclick="b9()"></div>
+      <div class="black-key" onclick="b10()"></div>
+      <div class="black-key-none"></div>
+      <div class="black-key" onclick="b11()"></div>
+      <div class="black-key" onclick="b12()"></div>
+      <div class="black-key-none"></div>
+      <div class="black-key" onclick="b13()"></div>
+    </div>
+    <audio src="audio/1.mp3"></audio>
+  </section>
+  <script>
+    // 白鍵
+    function w1() {
+      var sound = new Audio('audio/1.mp3');
+      sound.play();
+    }
+    function w2() {
+      var sound = new Audio('audio/2.mp3');
+      sound.play();
+    }
+    function w3() {
+      var sound = new Audio('audio/3.mp3');
+      sound.play();
+    }
+    function w4() {
+      var sound = new Audio('audio/4.mp3');
+      sound.play();
+    }
+    function w5() {
+      var sound = new Audio('audio/5.mp3');
+      sound.play();
+    }
+    function w6() {
+      var sound = new Audio('audio/6.mp3');
+      sound.play();
+    }
+    function w7() {
+      var sound = new Audio('audio/7.mp3');
+      sound.play();
+    }
+    function w8() {
+      var sound = new Audio('audio/8.mp3');
+      sound.play();
+    }
+    function w9() {
+      var sound = new Audio('audio/9.mp3');
+      sound.play();
+    }
+    function w10() {
+      var sound = new Audio('audio/10.mp3');
+      sound.play();
+    }
+    function w11() {
+      var sound = new Audio('audio/11.mp3');
+      sound.play();
+    }
+    function w12() {
+      var sound = new Audio('audio/12.mp3');
+      sound.play();
+    }
+    function w13() {
+      var sound = new Audio('audio/13.mp3');
+      sound.play();
+    }
+    function w14() {
+      var sound = new Audio('audio/14.mp3');
+      sound.play();
+    }
+    function w15() {
+      var sound = new Audio('audio/15.mp3');
+      sound.play();
+    }
+    function w16() {
+      var sound = new Audio('audio/16.mp3');
+      sound.play();
+    }
+    function w17() {
+      var sound = new Audio('audio/17.mp3');
+      sound.play();
+    }
+    function w18() {
+      var sound = new Audio('audio/18.mp3');
+      sound.play();
+    }
+    function w19() {
+      var sound = new Audio('audio/19.mp3');
+      sound.play();
+    }
+    // 黒鍵
+    function b1() {
+      var sound = new Audio('audio/20.mp3');
+      sound.play();
+    }
+    function b2() {
+      var sound = new Audio('audio/21.mp3');
+      sound.play();
+    }
+    function b3() {
+      var sound = new Audio('audio/22.mp3');
+      sound.play();
+    }
+    function b4() {
+      var sound = new Audio('audio/23.mp3');
+      sound.play();
+    }
+    function b5() {
+      var sound = new Audio('audio/24.mp3');
+      sound.play();
+    }
+    function b6() {
+      var sound = new Audio('audio/25.mp3');
+      sound.play();
+    }
+    function b7() {
+      var sound = new Audio('audio/26.mp3');
+      sound.play();
+    }
+    function b8() {
+      var sound = new Audio('audio/27.mp3');
+      sound.play();
+    }
+    function b9() {
+      var sound = new Audio('audio/28.mp3');
+      sound.play();
+    }
+    function b10() {
+      var sound = new Audio('audio/29.mp3');
+      sound.play();
+    }
+    function b11() {
+      var sound = new Audio('audio/30.mp3');
+      sound.play();
+    }
+    function b12() {
+      var sound = new Audio('audio/31.mp3');
+      sound.play();
+    }
+    function b13() {
+      var sound = new Audio('audio/32.mp3');
+      sound.play();
+    }
+  </script>
 </body>
+
 </html>
