@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- 言語・環境設定 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <!-- リンク -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/encoding-japanese/1.0.30/encoding.min.js"></script>
+
+  <!-- ページの内容 -->
+  <title>QRコード作成システム</title>
+  <meta name="description" content="URLからQRコードが作成できるサービスです。">
+
+  <!-- OGPタグ用 -->
+  <html prefix="og: http://ogp.me/ns#">
+
+  </html>
+  <meta property="og:url" content="https://pocopota.github.io/qr-generator/" />
+  <meta property="og:title" content="QRコード作成システム" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="URLからQRコードが作成できるサービスです。">
+  <meta property="og:image" content="サムネイル画像のURL" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@PocoPota_io" />
+  <meta property="og:site_name" content="QRコード作成システム" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <div>
+    <input type="text" id="txtqr" name="txtqr" style="width:30em;" placeholder="読み込ませたい文字列やURLを入力">
+    </div>
+    <div>
+    <button id="btnmake" style="width:5em;">作成</button>
+    <button id="btnclear" style="width:5em;">クリア</button>
+    </div>
+    <div>作成した文字列:<span id="qrtxt"></span></div>
+    <div id="qrcodearea"></div>
+    <script>
+    $('#btnmake').click(function() {
+    var strqrorg = $('#txtqr').val();
+    var strqrsjis = Encoding.convert(strqrorg, 'SJIS');
+    $('#qrcodearea').html('');
+    $('#qrcodearea').qrcode({width: 128, height: 128, text: strqrsjis});
+    $('#qrtxt').text(strqrorg);
+    })
+    $('#btnclear').click(function() {
+    $('#txtqr').val("");
+    })
+    </script>
+    
+
+</body>
+
+</html>

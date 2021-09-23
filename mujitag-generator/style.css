@@ -1,0 +1,212 @@
+/* 全体 */
+body{
+  background-color: #E1B98B;
+  margin: 0;
+  padding: 0;
+}
+/* ヘッダー */
+header{
+  background-color: #7F0019;
+}
+#header-inner{
+  width: 1200px;
+  margin: 0 auto;
+}
+#header-inner h1{
+  color: white;
+  margin: 0;
+  padding: 15px;
+  padding-left: 10px;
+}
+#header-inner h1 a{
+  color: white;
+  text-decoration: none;
+}
+/* メイン */
+main{
+  width: 1200px;
+  margin: 0 auto;
+}
+/* トップページ */
+h2{
+  font-size: 30px;
+}
+#top #intro{
+  text-align: center;
+}
+#top #intro h2{
+  margin-top: 40px;
+}
+#top #intro a{
+  color: black;
+}
+#top #select{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 12px;
+}
+#top #select #select-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+#top #select #select-inner button{
+  cursor : pointer;
+}
+#top #select #select-inner div, #top .select-color .select-color-inner div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 20px;
+  background-color: #7F0019;
+  margin-bottom: 30px;
+}
+#top #select #select-inner div, #top .select-color .select-color-inner p{
+  color: white;
+}
+#top #select #select-inner div, #top .select-color .select-color-inner img{
+  width: 350px;
+}
+#top .select-color{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+#top .select-color .select-color-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#top .select-color .select-color-inner div{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  margin: auto 30px;
+  margin-bottom: 30px;
+}
+#top .select-color{
+  display: none;
+  margin-bottom: 50px;
+}
+#top .select-color button a{
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+/* ジェネレーター */
+#generator{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px auto;
+}
+/* canvas */
+#long canvas{
+  width: calc(699px/2);
+  height:calc(1172px/2);
+  margin-right: 30px;
+  background-color: aliceblue;
+}
+#square canvas{
+  width: calc(680px/2);
+  height:calc(680px/2);
+  margin-right: 30px;
+  background-color: aliceblue;
+}
+/* カスタマイズ */
+#customize{
+  display: flex;
+  flex-direction: column;
+}
+#customize .text-box{
+  width: 400px;
+  height: 25px;
+  margin: 3px;
+}
+#customize button{
+  width: 408px;
+  margin: 3px;
+  height: 25px;
+}
+/* ダウンロードボタン */
+#buttons{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 37px;
+}
+/* article */
+article{
+  width: 900px;
+  margin: 0 auto;
+}
+/* フッター */
+footer{
+  background-color: #7F0019;
+  display: flex;
+  justify-content: center;
+}
+footer ul{
+  display: flex;
+  flex-direction: row;
+}
+footer li{
+  list-style: none;
+  color: white;
+  margin: auto 15px;
+}
+footer li a{
+  color: white;
+  text-decoration: none;
+}
+footer li a:hover{
+  opacity: 0.8;
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 750px){
+  #header-inner{
+    width: 100%;
+  }
+  #header-inner h1{
+    font-size: 23px;
+    text-align: center;
+  }
+  main{
+    width: 95%;
+    margin: 0 auto;
+  }
+  #generator{
+    flex-direction: column;
+  }
+  #customize{
+    width: 100%;
+  }
+  canvas{
+    margin-bottom: 30px;
+  }
+  #customize .text-box{
+    width: calc(100% - 15px);
+  }
+  #customize button{
+    width: calc(100% - 7px);
+  }
+  article{
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1200px){
+  #header-inner{
+    width: 100%;
+  }
+  #header-inner h1{
+    font-size: 23px;
+    text-align: center;
+  }
+  main{
+    width: 95%;
+    margin: 0 auto;
+  }
+}

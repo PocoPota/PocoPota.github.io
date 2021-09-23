@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- 言語・環境設定 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <!-- リンク -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/encoding-japanese/1.0.30/encoding.min.js"></script>
+
+  <!-- ページの内容 -->
+  <title>MUJIタグジェネレーター</title>
+  <meta name="description" content="無印良品の商品についているタグをカスタマイズして作成できるサービスです。">
+
+  <!-- サイトアイコン -->
+  <link rel="icon" href="images/logo.png" sizes="16x16" type="image/png"> <!-- 通常用 -->
+
+  <!-- OGPタグ用 -->
+  <html prefix="og: http://ogp.me/ns#">
+
+  </html>
+  <meta property="og:url" content="https://pocopota.github.io/mujitag-generator/" />
+  <meta property="og:title" content="MUJIタグジェネレーター" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="無印良品の商品についているタグをカスタマイズして作成できるサービスです。">
+  <meta property="og:image" content="https://pocopota.github.io/mujitag-generator/images/ogp.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@PocoPota_io" />
+  <meta property="og:site_name" content="MUJIタグジェネレーター" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+
+  <!-- アイコン -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div id="header-inner">
+      <h1><a href="index.html">MUJIタグジェネレーター</a></h1>
+    </div>
+  </header>
+  <main id="square">
+    <div id="generator">
+      <canvas id="cv" width="680" height="680"></canvas>
+      <div id="customize">
+        <input type="text" id="text-a" class="text-box" placeholder="説明文1行目を入力...">
+        <input type="text" id="text-b" class="text-box" placeholder="名前を入力...">
+        <input type="text" id="text-c" class="text-box" placeholder="アルファベットを入力...">
+        <input type="text" id="text-da" class="text-box" placeholder="情報1行目を入力...">
+        <input type="text" id="text-db" class="text-box" placeholder="情報2行目を入力...">
+        <input type="text" id="text-dc" class="text-box" placeholder="情報3行目を入力...">
+        <input type="text" id="text-dd" class="text-box" placeholder="情報4行目を入力...">
+        <input type="text" id="text-de" class="text-box" placeholder="情報5行目を入力...">
+        <input type="text" id="text-e" class="text-box" placeholder="文字列を入力...">
+        <button id="load">更新</button>
+      </div>
+    </div>
+    <div id="buttons">
+      <button id="dow-btn"><i class="fas fa-download"></i>画像をダウンロード</button>
+    </div>
+  </main>
+  <footer>
+    <ul id="footer-nav">
+      <li><a href="how-to-use.html">使い方</a></li>
+      <li><a href="websitepolicy.html">ウェブサイトポリシー</a></li>
+      <li><a href="https://pocopota.github.io/">開発者</a></li>
+      <li>©2021 MUJIタグジェネレーター</li>
+    </ul>
+  </footer>
+  <script type="text/javascript" src="canvas/square-white.js"></script>
+</body>
+
+</html>
