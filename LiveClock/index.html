@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- リンク -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+  <!-- 言語・環境設定 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <!-- ページの内容 -->
+  <title>LiveClock</title>
+  <meta name="description" content="配信時用時計表示サービス">
+
+  <!-- サイトアイコン -->
+  <link rel="icon" href="images/logo2.PNG">
+ 
+
+  <!-- OGPタグ用 -->
+  <html prefix="og: http://ogp.me/ns#">
+  <meta property="og:url" content="https://pocopota.github.io/LiveClock/" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="配信時用時計表示サービス">
+  <meta property="og:image" content="https://pocopota.github.io/LiveClock/images/samune.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@PocoPota_io" />
+  <meta property="og:site_name" content="LiveClock" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta property="og:title" content="LiveClock" />
+
+  <!-- 共通部分 -->
+  <script>
+    $(function () {
+      $("#header").load("include/header.html");
+      $("#footer").load("include/footer.html");
+    });
+  </script>
+    
+  <!-- サーチコンソール -->
+  <meta name="google-site-verification" content="AH8AMDl-aD1Hko1ixXdcDQR0Y_MDZWYGylunJn252oA" />
+    
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6X07W2B40H"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-6X07W2B40H');
+  </script>
+    
+  <script data-ad-client="ca-pub-3868968729859777" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body id="index">
+  <header id="header"></header>
+  <main>
+    <section id="display">
+      <div id="time-display-p">
+        <p id="time-display">
+          <span id="HM"></span>
+          <span id="Se"></span>
+        </p>
+      </div>
+      <!-- <p id="date-display"></p>  -->
+      <script type="text/javascript" src="javascript/index.js"></script>
+    </section>
+    <section id="custom-css">
+      <h2>カスタマイズ</h2>
+      <div class="row">
+        <div id="custom-change" class="custom-box">
+          <h3>設定</h3>
+          <div id="font-color">
+            文字色
+            <label><input type="color" id="FontColor"></label>
+          </div>
+          <div id="background-color">
+            背景色
+            <input type="color" id="BackgroundColor">
+            <label><input type="checkbox" id="backTrans">背景透過</label>
+          </div>
+          <div id="font">
+            フォント
+            <select id="fontSelect">
+              <option value="'Rubik', sans-serif" hidden>選択してください</option>
+              <option value="Abril Fatface, cursive" id="font1">Abril Fatface</option>
+              <option value="Anton, sans-serif" id="font2">Anton</option>
+              <option value="Architects Daughter, cursive" id="font3">Architects Daughter</option>
+              <option value="Averia Serif Libre, cursive" id="font4">Averia Serif Libre</option>
+              <option value="Balsamiq Sans, cursive" id="font5">Balsamiq Sans</option>
+              <option value="Bungee Shade, cursive" id="font6">Bungee Shade</option>
+              <option value="Chango, cursive" id="font7">Chango</option>
+              <option value="Comfortaa, cursive" id="font8">Comfortaa</option>
+              <option value="Dela Gothic One, cursive" id="font9">Dela Gothic One</option>
+              <option value="Dosis, sans-serif" id="font10">Dosis</option>
+              <option value="DotGothic16, sans-serif" id="font11">DotGothic16</option>
+              <option value="Fredoka One, cursive" id="font12">Fredoka One</option>
+              <option value="Inconsolata, monospace" id="font13">Inconsolata</option>
+              <option value="Karla, sans-serif" id="font14">Karla</option>
+              <option value="Kenia, cursive" id="font15">Kenia</option>
+              <option value="Kiwi Maru, serif" id="font16">Kiwi Maru</option>
+              <option value="Lato, sans-serif" id="font17">Lato</option>
+              <option value="Lexend, sans-serif" id="font18">Lexend</option>
+              <option value="Lobster, cursive" id="font19">Lobster</option>
+              <option value="Lora, serif" id="font20">Lora</option>
+              <option value="Merriweather, serif" id="font21">Merriweather</option>
+              <option value="Monofett, cursive" id="font22">Monofett</option>
+              <option value="Montserrat, sans-serif" id="font23">Montserrat</option>
+              <option value="New Tegomin, serif" id="font24">New Tegomin</option>
+              <option value="Noto Sans JP, sans-serif" id="font25">Noto Sans JP</option>
+              <option value="Noto Sans KR, sans-serif" id="font26">Noto Sans KR</option>
+              <option value="Noto Sans TC, sans-serif" id="font27">Noto Sans TC</option>
+              <option value="Noto Serif, serif" id="font28">Noto Serif</option>
+              <option value="Nunito, sans-serif" id="font29">Nunito</option>
+              <option value="Open Sans Condensed, sans-serif" id="font30">Open Sans Condensed</option>
+              <option value="Open Sans, sans-serif" id="font31">Open Sans Condensed</option>
+              <option value="Orbitron, sans-serif" id="font32">Orbitron</option>
+              <option value="Oswald, sans-serif" id="font33">Oswald</option>
+              <option value="Pacifico, cursive" id="font34">Pacifico</option>
+              <option value="Pangolin, cursive" id="font35">Pangolin</option>
+              <option value="Parisienne, cursive" id="font36">Parisienne</option>
+              <option value="Play, sans-serif" id="font37">Play</option>
+              <option value="Playfair Display, serif" id="font38">Playfair Display</option>
+              <option value="Poppins, sans-serif" id="font39">Poppins</option>
+              <option value="PT Sans, sans-serif" id="font40">PT Sans</option>
+              <option value="PT Serif, serif" id="font41">PT Serif</option>
+              <option value="Quicksand, sans-serif" id="font42">Quicksand</option>
+              <option value="Roboto Condensed, sans-serif" id="font43">Roboto Condensed</option>
+              <option value="Roboto Mono, monospace" id="font44">Roboto Mono</option>
+              <option value="Roboto Slab, serif" id="font45">Roboto Slab</option>
+              <option value="Roboto, sans-serif" id="font46">Roboto</option>
+              <option value="Rubik, sans-serif" id="font47">Rubik</option>
+              <option value="Russo One, sans-serif" id="font48">Russo One</option>
+              <option value="Sirin Stencil, cursive" id="font49">Sirin Stencil</option>
+              <option value="Source Sans Pro, sans-serif" id="font50">Source Sans Pro</option>
+              <option value="Teko, sans-serif" id="font51">Teko</option>
+              <option value="Train One, cursive" id="font52">Train One</option>
+              <option value="Ubuntu, sans-serif" id="font53">Ubuntu</option>
+              <option value="Work Sans, sans-serif" id="font54">Work Sans</option>
+              <option value="ZCOOL QingKe HuangYou, cursive" id="font55">ZCOOL QingKe HuangYou</option>
+            </select>
+          </div>
+          <div id="font-size">
+            フォントサイズ
+            <input type="range" min="0" max="30" step="1" id="fontSize" value="18">
+            <span id="font-size-dis1">18</span>
+          </div>
+          <div id="font-option">
+            <label><input type="checkbox" value="font-weight: bold;" id="fontBold">太字</label>
+            <label><input type="checkbox" value="font-style: italic;" id="fontItalic">斜体</label>
+            <label><input type="checkbox" id="noneSe">秒数非表示</label>
+          </div>
+        </div>
+        <div id="design-css" class="custom-box">
+          <h3>貼り付け用CSS</h3>
+          <input type="button" value="CSSを更新" id="CssDisplayBu">
+          <input type="button" value="CSSをコピー" id="CssCopy">
+          <div id="css-display">
+            <p id="css-display-p">
+              <span id="font-link">@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');</span>
+              <br>
+              #time-display{
+              <br>
+              &nbsp;&nbsp;color: <span id="font-color-css">#000000</span>;
+              <br>
+              &nbsp;&nbsp;font-family: <span id="font-css">'Rubik', sans-serif</span>;
+              <br>
+              &nbsp;&nbsp;font-size: <span id="font-size-css">18</span>vw;
+              <br>
+              <span id="font-weight-css"></span>
+              <span id="font-style-css"></span>
+              }
+              <br>
+              <span id="for-none">
+                #display{
+                <br>
+                &nbsp;&nbsp;background-color: <span id="background-color-css">#ffffff</span>;
+                <br>}
+              </span>
+              <span id="second-none"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="javascript/css.js"></script>
+    </section>
+  </main>
+  <footer id="footer"></footer>
+</body>
+
+</html>
