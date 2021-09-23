@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- 言語・環境設定 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <!-- ページの内容 -->
+  <title>YouTube Windows</title>
+  <meta name="description" content="YouTubeのurlを貼り付けるだけで一画面で複数の動画を同時に再生できるサービスです。">
+
+  <!-- サイトアイコン -->
+  <link rel="icon" href="logo.png" sizes="16x16" type="png"> <!-- 通常用 -->
+
+  <meta property="og:url" content="https://pocopota.github.io/youtube-windows/" />
+  <meta property="og:title" content="YouTube Windows" />
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="YouTubeのurlを貼り付けるだけで一画面で複数の動画を同時に再生できるサービスです。">
+  <meta property="og:image" content="https://pocopota.github.io/youtube-windows/samune.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@PocoPota_io" />
+  <meta property="og:site_name" content="YouTube Windows" />
+  <meta property="og:locale" content="ja_JP" />
+  <style>
+    #input-url {
+      display: flex;
+      flex-direction: column;
+      width: 350px;
+    }
+
+    #windows {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    #windows div {
+      width: 500px;
+      height: 281px;
+      margin: 30px 0;
+    }
+
+    #windows div iframe {
+      width: 500px;
+      height: 281px;
+    }
+
+    @media screen and (max-width: 520px) {
+      #input-url {
+        width: 95%;
+      }
+
+      #windows div {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+      }
+
+      #windows div iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- まだ完全に完成していません -->
+  <section>
+    <div id="input-url">
+      <input type="url" id="url1">
+      <input type="url" id="url2">
+      <input type="url" id="url3">
+      <input type="url" id="url4">
+      <input type="url" id="url5">
+      <input type="url" id="url6">
+      <input type="url" id="url7">
+      <input type="url" id="url8">
+      <input type="url" id="url9">
+      <input type="button" value="表示" onclick="display()">
+      <input type="button" value="リセット" onclick="reset()">
+      <input type="button" value="現在のURLを保存しておく" onclick="keep()">
+    </div>
+    <div id="scale-change">
+      <button class="scale-change" id="scale50" value="50">50%</button>
+      <button class="scale-change" id="scale67" value="67">67%</button>
+      <button class="scale-change" id="scale75" value="75">75%</button>
+      <button class="scale-change" id="scale80" value="80">80%</button>
+      <button class="scale-change" id="scale90" value="90">90%</button>
+      <button class="scale-change" id="scale100" value="100">100%</button>
+      <button class="scale-change" id="scale110" value="110">110%</button>
+      <button class="scale-change" id="scale125" value="125">125%</button>
+      <button class="scale-change" id="scale150" value="150">150%</button>
+    </div>
+  </section>
+  <section id="windows">
+    <div id="win1"></div>
+    <div id="win2"></div>
+    <div id="win3"></div>
+    <div id="win4"></div>
+    <div id="win5"></div>
+    <div id="win6"></div>
+    <div id="win7"></div>
+    <div id="win8"></div>
+    <div id="win9"></div>
+  </section>
+  <script>
+    window.onload = function () {
+      var data1 = window.localStorage.getItem('data1');
+      var data2 = window.localStorage.getItem('data2');
+      var data3 = window.localStorage.getItem('data3');
+      var data4 = window.localStorage.getItem('data4');
+      var data5 = window.localStorage.getItem('data5');
+      var data6 = window.localStorage.getItem('data6');
+      var data6 = window.localStorage.getItem('data7');
+      var data6 = window.localStorage.getItem('data8');
+      var data6 = window.localStorage.getItem('data9');
+      document.getElementById('url1').value = data1;
+      document.getElementById('url2').value = data2;
+      document.getElementById('url3').value = data3;
+      document.getElementById('url4').value = data4;
+      document.getElementById('url5').value = data5;
+      document.getElementById('url6').value = data6;
+      document.getElementById('url6').value = data7;
+      document.getElementById('url6').value = data8;
+      document.getElementById('url6').value = data9;
+    }
+    function display() {
+      var url1 = document.getElementById('url1').value.slice(0, 17);
+      var url2 = document.getElementById('url2').value.slice(0, 17);
+      var url3 = document.getElementById('url3').value.slice(0, 17);
+      var url4 = document.getElementById('url4').value.slice(0, 17);
+      var url5 = document.getElementById('url5').value.slice(0, 17);
+      var url6 = document.getElementById('url6').value.slice(0, 17);
+      var url7 = document.getElementById('url7').value.slice(0, 17);
+      var url8 = document.getElementById('url8').value.slice(0, 17);
+      var url9 = document.getElementById('url9').value.slice(0, 17);
+      if (url1 == 'https://youtu.be/') {
+        var url1 = document.getElementById('url1').value.slice(17);
+      } else if (url1=='https://www.youtu') {
+        var url1 = document.getElementById('url1').value.slice(32);
+      } else{
+        var url1 = document.getElementById('url1').value.slice(30);
+      }
+      if (url2 == 'https://youtu.be/') {
+        var url2 = document.getElementById('url2').value.slice(17);
+      } else if (url2=='https://www.youtu'){
+        var url2 = document.getElementById('url2').value.slice(32);
+      } else{
+        var url2 = document.getElementById('url2').value.slice(30);
+      }
+      if (url3 == 'https://youtu.be/') {
+        var url3 = document.getElementById('url3').value.slice(17);
+      } else if (url3=='https://www.youtu'){
+        var url3 = document.getElementById('url3').value.slice(32);
+      } else{
+        var url3 = document.getElementById('url3').value.slice(30);
+      }
+      if (url4 == 'https://youtu.be/') {
+        var url4 = document.getElementById('url4').value.slice(17);
+      } else if (url4=='https://www.youtu'){
+        var url4 = document.getElementById('url4').value.slice(32);
+      } else{
+        var url4 = document.getElementById('url4').value.slice(30);
+      }
+      if (url5 == 'https://youtu.be/') {
+        var url5 = document.getElementById('url5').value.slice(17);
+      } else if (url5=='https://www.youtu'){
+        var url5 = document.getElementById('url5').value.slice(32);
+      } else{
+        var url5 = document.getElementById('url5').value.slice(30);
+      }
+      if (url6 == 'https://youtu.be/') {
+        var url6 = document.getElementById('url6').value.slice(17);
+      } else if (url6=='https://www.youtu'){
+        var url6 = document.getElementById('url6').value.slice(32);
+      } else{
+        var url6 = document.getElementById('url6').value.slice(30);
+      }
+      if (url7 == 'https://youtu.be/') {
+        var url7 = document.getElementById('url7').value.slice(17);
+      } else if (url7=='https://www.youtu'){
+        var url7 = document.getElementById('url7').value.slice(32);
+      } else{
+        var url7 = document.getElementById('url7').value.slice(30);
+      }
+      if (url8 == 'https://youtu.be/') {
+        var url8 = document.getElementById('url8').value.slice(17);
+      } else if (url8=='https://www.youtu'){
+        var url8 = document.getElementById('url8').value.slice(32);
+      } else{
+        var url8 = document.getElementById('url8').value.slice(30);
+      }
+      if (url9 == 'https://youtu.be/') {
+        var url9 = document.getElementById('url9').value.slice(17);
+      } else if (url9=='https://www.youtu'){
+        var url9 = document.getElementById('url9').value.slice(32);
+      } else{
+        var url9 = document.getElementById('url9').value.slice(30);
+      }
+      document.getElementById('win1').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url1 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win2').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url2 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win3').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url3 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win4').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url4 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win5').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url5 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win6').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url6 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win7').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url7 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win8').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url8 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      document.getElementById('win9').innerHTML = '<iframe src="https://www.youtube.com/embed/' + url9 + '" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    }
+    function reset() {
+      document.getElementById('url1').value = '';
+      document.getElementById('url2').value = '';
+      document.getElementById('url3').value = '';
+      document.getElementById('url4').value = '';
+      document.getElementById('url5').value = '';
+      document.getElementById('url6').value = '';
+      document.getElementById('url7').value = '';
+      document.getElementById('url8').value = '';
+      document.getElementById('url9').value = '';
+    }
+    function keep() {
+      var data1 = document.getElementById('url1').value;
+      var data2 = document.getElementById('url2').value;
+      var data3 = document.getElementById('url3').value;
+      var data4 = document.getElementById('url4').value;
+      var data5 = document.getElementById('url5').value;
+      var data6 = document.getElementById('url6').value;
+      var data6 = document.getElementById('url7').value;
+      var data6 = document.getElementById('url8').value;
+      var data6 = document.getElementById('url9').value;
+      localStorage.setItem('data1', data1);
+      localStorage.setItem('data2', data2);
+      localStorage.setItem('data3', data3);
+      localStorage.setItem('data4', data4);
+      localStorage.setItem('data5', data5);
+      localStorage.setItem('data6', data6);
+      localStorage.setItem('data6', data7);
+      localStorage.setItem('data6', data8);
+      localStorage.setItem('data6', data9);
+      window.alert('URLを保存しました。これらのURLは次のアクセス時にも引き継がれます。');
+    }
+    $('.scale-change').on('click', function () {
+      var btnId = '#' + $(this).attr("id"); //押されたボタンのidを取得
+      var scaleVal = parseInt($(btnId).val()); //取得したidからvalueを取得　parseIntで数値として取得
+      $('body').css({
+        'zoom': scaleVal + '%'
+      });
+    });
+  </script>
+</body>
+
+</html>
