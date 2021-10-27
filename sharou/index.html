@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- 言語・環境設定 -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<!-- ページの内容 -->
+<title>しゃろうBGMガチャ</title>
+<meta name="description" content="しゃろうさんのBGMのガチャです">
+
+<!-- サイトアイコン -->
+<link rel="icon" href="https://pocopota.github.io/sharou/images/icon.jpg" sizes="16x16" type="image/jpg"> <!-- 通常用 -->
+
+<!-- いろいろ読み込み -->
+<link rel="stylesheet" href="css/style.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
+
+<!-- OGPタグ用 -->  
+<meta property="og:url" content="https://pocopota.github.io/sharou" />
+<meta property="og:title" content="しゃろうBGMガチャ" />
+<meta property="og:type" content="website">
+<meta property="og:description" content="しゃろうさんのBGMのガチャです">
+<meta property="og:image" content="https://pocopota.github.io/sharou/images/ogp.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@PocoPota_io" />
+<meta property="og:site_name" content="しゃろうBGMガチャ" />
+<meta property="og:locale" content="ja_JP" />
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">しゃろうBGMガチャ</a></h1>
+    </header>
+    <main>
+        <div id="gacha">
+            <div id="gacha-top"></div>
+            <div id="gacha-box">
+                <div id="gacha-capsules">
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                    <div class="gacha-capsule"></div>
+                </div>
+            </div>
+            <div id="gacha-bottom">
+                <div id="gacha-handle" onclick="gacha()">
+                    <div id="gacha-handle-border"></div>
+                </div>
+            </div>
+        </div>
+        <div id="bgm-display"></div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
